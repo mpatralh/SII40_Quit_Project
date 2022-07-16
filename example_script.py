@@ -41,6 +41,7 @@ classifier = RandomForestClassifier(n_estimators=100)
 # Train the model using the training set
 classifier.fit(X_train,y_train)
 prediction = classifier.predict(X_test)
+# Make prediction for a new row
 print("PREDICTION FOR UNKNOWN INPUT  --------->  ",classifier.predict([[500,4,3,1]]))
 print("Accuracy:",metrics.accuracy_score(y_test, prediction))
 print("Precision Score of the classifier is:" ,precision_score(y_test, prediction,average='weighted'))
